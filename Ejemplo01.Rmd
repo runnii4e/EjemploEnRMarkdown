@@ -1,0 +1,34 @@
+---
+title: "Primer reporte en R Markdown"
+author: "Rubí Pérez Britz 131009"
+date: "Saturday, August 16, 2014"
+output: html_document
+---
+
+### Introducción al formato R Markdown
+
+ejemplo elaborado `r date ()`
+
+```{r GenerarHistograma}
+ set.seed(20140815)
+x <- rnorm(10000, mean = 80, sd = 10)
+hist(x, breaks = 100, border="white", col = gray(0.7))
+abline(v = mean(x), col = "blue", lwd = 2 )
+
+```
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
